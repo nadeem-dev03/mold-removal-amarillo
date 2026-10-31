@@ -64,6 +64,8 @@
 }
 html[data-theme="light"]{--bg:var(--paper);--surface:#FFFFFF;--surface2:var(--pine-tint);--text:var(--ink);--muted:var(--muted-l);--line:rgba(12,43,38,.25)}
 *{box-sizing:border-box} html{scroll-behavior:smooth}
+.svc>*,.help>*,.two>*,.map-layout>*,.citypage .cols>*,.foot-grid>*,.gallery>*,.blog>*,.answers>*,.city-grid>*,.steps>*,.list-row>*{min-width:0}
+p,h1,h2,h3,a{overflow-wrap:break-word}
 body{margin:0;font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.65;font-size:17px}
 img,video{max-width:100%;display:block}
 a{color:inherit}
@@ -86,7 +88,7 @@ html[data-theme="light"] header{background:#FFFFFF}
 nav.main{display:none}
 /* Header Call Now / desktop theme button removed — call lives in the fixed
    controls below, theme toggle lives only inside the menu. */
-.menu-btn{display:inline-flex;margin-left:auto;background:#FFFFFF;border:2px solid var(--pine);color:var(--pine);border-radius:8px;padding:9px 13px;font-weight:700;cursor:pointer;font-family:var(--body);font-size:15px;line-height:1;align-items:center;gap:7px;flex:none}
+.menu-btn{display:inline-flex;margin-left:auto;background:#FFFFFF;border:2px solid var(--pine);color:var(--pine);border-radius:8px;padding:9px 13px;font-weight:700;cursor:pointer;font-family:var(--body);font-size:15px;line-height:1;align-items:center;gap:7px;flex:none;min-height:44px}
 .mobile-menu{display:none;background:#FFFFFF;border-top:1px solid rgba(12,43,38,.2)}
 .mobile-menu.open{display:block;max-height:calc(100vh - 120px);overflow-y:auto}
 .mobile-menu nav{display:flex;flex-direction:column}
@@ -230,7 +232,7 @@ footer a{color:var(--amber)}
 footer{padding-bottom:96px}
 @media(max-width:900px){
   .hbar{padding:10px 14px;gap:10px}
-  .logo img{height:42px;max-width:62vw}
+  .logo img{height:48px;max-width:62vw}
   .logo img.footer-logo{height:52px}
   .fixed-call{display:none}
   .svc,.help,.two,.foot-grid,.answers,.citypage .cols{grid-template-columns:1fr}
@@ -248,6 +250,12 @@ footer{padding-bottom:96px}
 @media(max-width:480px){
   #map{height:300px;min-height:300px}
   .map-row .map-go{display:none}
+  .hero h1{font-size:34px}
+  .btn{padding:14px 18px;font-size:15px}
+  .big-call{font-size:18px;padding:13px 16px;max-width:100%}
+  .sticky-call{font-size:15px;padding:14px 12px;gap:6px}
+  .leaflet-popup-content-wrapper{max-width:calc(100vw - 48px)}
+  .leaflet-popup-content{max-width:calc(100vw - 80px);overflow-wrap:break-word}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
